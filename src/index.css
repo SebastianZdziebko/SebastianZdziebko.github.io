@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-zinc-100 bg-[#050505];
+  }
+}
+
+@layer utilities {
+  .sharp-border {
+    @apply border border-zinc-800;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}

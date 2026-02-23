@@ -1,9 +1,5 @@
 import { Terminal, ChevronRight } from 'lucide-react';
-
-interface Project {
-  title: string;
-  tags: string[];
-}
+import type { Project } from '../types/project';
 
 interface SidebarProps {
   projects: Project[];
@@ -28,7 +24,7 @@ const Sidebar = ({ projects, selectedProject, onSelectProject, onSelectAbout, la
         </div>
         
         <div className="space-y-1">
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-600 mb-6 px-4">Directives</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-600 mb-6 px-4">{lang === 'EN' ? 'Projects' : 'Projekty'}</p>
           <nav className="space-y-1">
             {projects.map((project, index) => (
               <button
